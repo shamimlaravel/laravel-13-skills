@@ -45,15 +45,15 @@ npm install @shamimstack/laravel-13-skills
 
 | Component | Attributes Supported |
 |-----------|---------------------|
-| **Models** | `#[Table]`, `#[Fillable]`, `#[Guarded]`, `#[Unguarded]`, `#[Hidden]`, `#[Visible]`, `#[Cast]`, `#[Appends]`, `#[With]`, `#[WithRelations]`, `#[Touches]`, `#[Connection]`, `#[ObservedBy]`, `#[ScopedBy]`, `#[CollectedBy]`, `#[UseFactory]`, `#[UsePolicy]`, `#[UseResource]`, `#[Boot]`, `#[Initialize]`, `#[Scope]` |
-| **Jobs** | `#[Tries]`, `#[Timeout]`, `#[Backoff]`, `#[MaxExceptions]`, `#[Middleware]`, `#[Connection]`, `#[Queue]`, `#[UniqueFor]`, `#[FailOnTimeout]`, `#[DeleteWhenMissingModels]`, `#[WithoutRelations]` |
+| **Models** | `#[Table]`, `#[Fillable]`, `#[Guarded]`, `#[Unguarded]`, `#[Hidden]`, `#[Visible]`, `#[Cast]`, `#[Appends]`, `#[With]`, `#[WithRelations]`, `#[Touches]`, `#[Connection]`, `#[DateFormat]`, `#[WithoutIncrementing]`, `#[WithoutTimestamps]`, `#[ObservedBy]`, `#[ScopedBy]`, `#[CollectedBy]`, `#[UseFactory]`, `#[UsePolicy]`, `#[UseResource]`, `#[UseEloquentBuilder]`, `#[Boot]`, `#[Initialize]`, `#[Scope]` |
+| **Jobs** | `#[Tries]`, `#[Timeout]`, `#[Backoff]`, `#[MaxExceptions]`, `#[Middleware]`, `#[Connection]`, `#[Queue]`, `#[UniqueFor]`, `#[FailOnTimeout]`, `#[ReadsQueueAttributes]`, `#[DeleteWhenMissingModels]`, `#[WithoutRelations]` |
 | **Commands** | `#[Signature]`, `#[Description]`, `#[Help]`, `#[Hidden]`, `#[Aliases]`, `#[Usage]` |
 | **Controllers** | `#[Middleware]`, `#[Authorize]` |
 | **Form Requests** | `#[ErrorBag]`, `#[RedirectTo]`, `#[RedirectToRoute]`, `#[RedirectToAction]`, `#[StopOnFirstFailure]` |
 | **Resources** | `#[Collects]`, `#[PreserveKeys]` |
 | **Factories** | `#[UseModel]` |
 | **Testing** | `#[Seed]`, `#[Seeder]`, `#[SetUp]`, `#[TearDown]` |
-| **Container DI** | `#[CurrentUser]`, `#[Config]`, `#[DB]`, `#[Cache]`, `#[Log]`, `#[Storage]`, `#[Auth]`, `#[RouteParameter]`, `#[Context]` |
+| **Container DI** | `#[CurrentUser]`, `#[Config]`, `#[DB]`, `#[Database]`, `#[Cache]`, `#[Log]`, `#[Storage]`, `#[Auth]`, `#[Authenticated]`, `#[RouteParameter]`, `#[Context]`, `#[Give]`, `#[Tag]` |
 | **Service Registration** | `#[Bind]`, `#[Singleton]`, `#[Scoped]` |
 
 ## Example Usage

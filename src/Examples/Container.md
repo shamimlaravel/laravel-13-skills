@@ -357,3 +357,82 @@ class PaymentService
     }
 }
 ```
+
+---
+
+## Authenticated User Injection
+
+### After
+```php
+use Illuminate\Container\Attributes\Authenticated;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Routing\Controllers\Controller;
+
+class ProfileController extends Controller
+{
+    public function edit(#[Authenticated('web')] Authenticatable $user)
+    {
+        return view('profile.edit', ['user' => $user]);
+    }
+}
+```
+
+---
+
+## Database Alias Injection
+
+### After
+```php
+use Illuminate\Container\Attributes\Database;
+use Illuminate\Database\Connection;
+
+class LegacyService
+{
+    public function __construct(
+        #[Database('legacy_mysql')] private Connection $db,
+    ) {
+    }
+}
+```
+
+---
+
+## Give Specific Implementation
+
+### After
+```php
+use Illuminate\Container\Attributes\Give;
+use App\Contracts\PaymentGateway;
+
+class OrderProcessor
+{
+    public function __construct(
+        #[Give(StripePaymentGateway::class)] private PaymentGateway $gateway,
+    ) {
+    }
+}
+```
+
+---
+
+## Tagged Services Injection
+
+### After
+```php
+use Illuminate\Container\Attributes\Tag;
+
+class NotificationSender
+{
+    public function __construct(
+        #[Tag('notification.channels')] private iterable $channels,
+    ) {
+    }
+
+    public function send(string $message): void
+    {
+        foreach ($this->channels as $channel) {
+            $channel->send($message);
+        }
+    }
+}
+```

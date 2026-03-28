@@ -228,6 +228,75 @@ class Post extends Model
 
 ---
 
+## Model with DateFormat
+
+### Before
+```php
+class Event extends Model
+{
+    protected $dateFormat = 'Y-m-d H:i:s';
+}
+```
+
+### After
+```php
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Attributes\DateFormat;
+
+#[DateFormat('Y-m-d H:i:s')]
+class Event extends Model
+{
+}
+```
+
+---
+
+## Model with WithoutIncrementing
+
+### Before
+```php
+class UUIDModel extends Model
+{
+    public $incrementing = false;
+}
+```
+
+### After
+```php
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Attributes\WithoutIncrementing;
+
+#[WithoutIncrementing]
+class UUIDModel extends Model
+{
+}
+```
+
+---
+
+## Model with WithoutTimestamps
+
+### Before
+```php
+class LogEntry extends Model
+{
+    public $timestamps = false;
+}
+```
+
+### After
+```php
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Attributes\WithoutTimestamps;
+
+#[WithoutTimestamps]
+class LogEntry extends Model
+{
+}
+```
+
+---
+
 ## Complete Example
 
 ### Before

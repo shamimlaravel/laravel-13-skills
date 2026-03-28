@@ -53,7 +53,9 @@ The skill preserves all business logic and maintains backward compatibility. Att
 | `$keyType` | (use `#[Table]` with `keyType`) | - |
 | `$incrementing` | (use `#[Table]` with `incrementing`) | - |
 | `$timestamps` | (use `#[Table]` with `timestamps`) | - |
-| `$dateFormat` | (use `#[Table]` with `dateFormat`) | - |
+| `$dateFormat` | `#[DateFormat('Y-m-d')]` | `Illuminate\Database\Eloquent\Attributes\DateFormat` |
+| `$incrementing = false` | `#[WithoutIncrementing]` | `Illuminate\Database\Eloquent\Attributes\WithoutIncrementing` |
+| `$timestamps = false` | `#[WithoutTimestamps]` | `Illuminate\Database\Eloquent\Attributes\WithoutTimestamps` |
 | `$dispatchesEvents` | `#[DispatchesEvents]` | `Illuminate\Database\Eloquent\Attributes\DispatchesEvents` |
 | `$observables` | `#[Observers([...])]` | `Illuminate\Database\Eloquent\Attributes\Observers` |
 
@@ -86,6 +88,7 @@ The skill preserves all business logic and maintains backward compatibility. Att
 | `$queue` | `#[Queue('high')]` | `Illuminate\Queue\Attributes\Queue` |
 | `$uniqueFor` | `#[UniqueFor(3600)]` | `Illuminate\Queue\Attributes\UniqueFor` |
 | `$failOnTimeout` | `#[FailOnTimeout]` | `Illuminate\Queue\Attributes\FailOnTimeout` |
+| (new in Laravel 13.2) | `#[ReadsQueueAttributes]` | `Illuminate\Queue\Attributes\ReadsQueueAttributes` |
 
 ### Job Pre-existing Attributes
 
@@ -154,8 +157,12 @@ The skill preserves all business logic and maintains backward compatibility. Att
 | Log injection | `#[Log('channel')] LoggerInterface $log` | `Illuminate\Container\Attributes\Log` |
 | Storage injection | `#[Storage('disk')] Filesystem $disk` | `Illuminate\Container\Attributes\Storage` |
 | Auth guard injection | `#[Auth('guard')] Guard $auth` | `Illuminate\Container\Attributes\Auth` |
+| Authenticated user (via guard) | `#[Authenticated('web')] Authenticatable $user` | `Illuminate\Container\Attributes\Authenticated` |
 | Route parameter | `#[RouteParameter('name')] $value` | `Illuminate\Container\Attributes\RouteParameter` |
 | Context injection | `#[Context('key')] $value` | `Illuminate\Container\Attributes\Context` |
+| Database (alias for DB) | `#[Database('connection')] Connection $db` | `Illuminate\Container\Attributes\Database` |
+| Give specific implementation | `#[Give(Implementation::class)] $service` | `Illuminate\Container\Attributes\Give` |
+| Tagged services | `#[Tag('tag.name')] iterable $services` | `Illuminate\Container\Attributes\Tag` |
 
 ### Container Service Registration
 
