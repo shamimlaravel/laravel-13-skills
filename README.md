@@ -5,6 +5,7 @@ AI skill package for Laravel 13 PHP 8 attributes - write new code and refactor o
 [![PHP Version](https://img.shields.io/badge/PHP-8.3+-777BB4?style=flat&logo=php)](https://php.net)
 [![Laravel](https://img.shields.io/badge/Laravel-13-FF2D20?style=flat&logo=laravel)](https://laravel.com)
 [![License](https://img.shields.io/badge/License-MIT-4DC143?style=flat)](LICENSE)
+[![Total Attributes](https://img.shields.io/badge/Total-74%2B-4DC143?style=flat)](#)
 
 ## Description
 
@@ -12,7 +13,7 @@ This package provides AI agents with comprehensive knowledge of Laravel 13 PHP 8
 
 - **Writing new Laravel 13 code** using modern attribute syntax
 - **Refactoring existing code** from property-based configuration to PHP 8 attributes
-- Supporting all Laravel 13 components: Models, Jobs, Commands, Controllers, FormRequests, Factories, Testing, and Container DI
+- Supporting all Laravel 13 components: Models, Jobs, Commands, Controllers, FormRequests, Factories, Testing, Notifications, Middleware, Events, and Container DI
 
 ## Installation
 
@@ -27,6 +28,34 @@ composer require shamimstack/laravel-13-skills
 ```bash
 npm install @shamimstack/laravel-13-skills
 ```
+
+## Package Contents
+
+| File | Description |
+|------|-------------|
+| `SKILL.md` | Main AI skill definition |
+| `QUICKREF.md` | Quick attribute conversion reference |
+| `INDEX.md` | Package index and overview |
+| `CHANGELOG.md` | Version history |
+| `CONTRIBUTING.md` | Contribution guidelines |
+
+### Examples (`src/Examples/`)
+
+| File | Component | Examples |
+|------|-----------|----------|
+| `Models.md` | Eloquent Models | 11 |
+| `Jobs.md` | Queue Jobs | 10 |
+| `Commands.md` | Artisan Commands | 7 |
+| `Controllers.md` | HTTP Controllers | 6 |
+| `FormRequests.md` | Form Requests | 7 |
+| `Factories.md` | Model Factories | 2 |
+| `Testing.md` | Test Cases | 5 |
+| `Container.md` | Dependency Injection | 11 |
+| `Resources.md` | API Resources | 4 |
+| `Events.md` | Events & Listeners | 5 |
+| `Notifications.md` | Notifications | 4 |
+| `Middleware.md` | Middleware | 5 |
+| `Migrations.md` | Migrations | 3 |
 
 ## Usage with AI Agents
 
